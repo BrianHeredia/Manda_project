@@ -5,16 +5,30 @@ main{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-}.register{
+}
+h2{
+    margin-bottom: 1em;
+}
+p{
+    text-align: justify;
+    line-height: 1.6;
+}
+.history{
     width: 50%;
     padding: 1em;
-}.history{
+    line-height: 110%;
+}
+.register{
     width: 50%;
     padding: 1em;
+}
+.form{
+    display: flex;
 }
 .input-form{
     width: 100%;
 }
-.form{
-    display: flex;
+.casilla{
+    margin: 1em;
+    width: 100%;
 }

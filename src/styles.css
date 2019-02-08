@@ -1,3 +1,7 @@
+.pie{
+    position: absolute;
+    bottom: 0px;
+}
 .button{
     background-color: #ff6d23; 
     border: none;
@@ -8,8 +12,12 @@
     display: inline-block;
     font-size: 15px;    
 }
+.button:hover{
+    font-weight: 600;
+}
 label{
     margin: 0.2em;
+    white-space: nowrap;
 }
 
 input{
@@ -17,5 +25,8 @@ input{
     padding: 9px 9px;
 }
 *{
+    margin:0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
