@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.button{
+    background-color: #ff6d23; 
+    border: none;
+    color: white;
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;    
+}
+label{
+    margin: 0.2em;
+}
+
+input{
+    margin: 0.3em;
+    padding: 9px 9px;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+}
