@@ -23,7 +23,6 @@ body{
 }
 label{
     margin: 0.2em;
-    white-space: nowrap;
 }
 
 input{
@@ -83,4 +82,13 @@ input{
   ::-ms-scrollbar-thumb {
     background: rgb(36, 33, 33); 
     border-radius: 10px;
+  }
+
+  .alert.flash-message{
+    height:40px;
+    color: #1d1b1b;
+    background-color: #ec4d37;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
   }

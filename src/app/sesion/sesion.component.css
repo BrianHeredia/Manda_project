@@ -12,3 +12,9 @@ a:hover{
 label{
     color: white;
 }
+@media screen and (max-width: 900px) {
+    form{   
+      flex-direction: column;
+    }
+    
+  }

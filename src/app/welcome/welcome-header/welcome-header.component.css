@@ -6,8 +6,8 @@ header{
     border-bottom-style: solid;
     border-bottom-color: #ec4d37;
     border-bottom-width: 100%;
-    justify-content: space-between;
     background-color: #1d1b1b;
+    justify-content: space-between;
 }
 
 .logo{
@@ -18,3 +18,10 @@ header{
     margin-right: 1em;
     color: white;
 }
+
+@media screen and (max-width: 900px) {
+    header {   
+      flex-direction: column;
+    }
+    
+  }

@@ -1,9 +1,7 @@
 main{
     display: flex;
-    flex-flow: row;
     padding: 1em;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
 h2{
@@ -14,8 +12,17 @@ p{
     line-height: 1.6;
 }
 .history{
-    width: 50%;
     padding: 1em;
     line-height: 110%;
-    min-width: 350px;
+    max-width: 500px;
 }
+@media screen and (max-width: 900px) {
+    main {   
+      flex-direction: column;
+
+    }
+    .history{
+        max-width: 850px;
+        margin-bottom: 30px;
+    }
+  }
