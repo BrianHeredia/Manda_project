@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import { AngularFirestore } from '@angular/fire/firestore';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FlashMessagesService} from 'angular2-flash-messages';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,8 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { AuthGuard } from './guards/auth.guard';
+import { PerfilComponent } from './perfil/perfil.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
 @NgModule({
 
   declarations: [
@@ -36,7 +38,9 @@ import { AuthGuard } from './guards/auth.guard';
     HeaderComponent,
     BusquedaComponent,
     NavbarComponent,
-    SliderComponent
+    SliderComponent,
+    PerfilComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ import { AuthGuard } from './guards/auth.guard';
   providers: [
     AuthService,
     AuthGuard,
-    FlashMessagesService
+    FlashMessagesService,
+    AngularFirestore
   ],
   bootstrap: [AppComponent]
 })

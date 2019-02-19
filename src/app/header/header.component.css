@@ -12,8 +12,14 @@ header{
 }
 .userInfo{
     align-items: center;
+    display: flex;
 }
 .icons{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.iconNemail{
     display: flex;
     text-align: center;
     align-items: center;
@@ -31,9 +37,13 @@ header{
 #logout{
     text-decoration: none;
 }
-@media screen and (max-width: 1018px) {
+@media screen and (max-width: 1200px) {
     header {   
       flex-direction: column;
     }
-    
+    .icons{
+        flex-direction: column;
+    }
   }
+
+ 

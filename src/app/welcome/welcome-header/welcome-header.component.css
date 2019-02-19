@@ -5,7 +5,7 @@ header{
     padding: 1em;
     border-bottom-style: solid;
     border-bottom-color: #ec4d37;
-    border-bottom-width: 100%;
+    border-bottom-width: 6px;
     background-color: #1d1b1b;
     justify-content: space-between;
 }
