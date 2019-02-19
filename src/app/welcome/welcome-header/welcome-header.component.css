@@ -4,10 +4,10 @@ header{
     align-items: center;
     padding: 1em;
     border-bottom-style: solid;
-    border-bottom-color: #ff6d23;
+    border-bottom-color: #ec4d37;
     border-bottom-width: 100%;
-    width: 100%;
     justify-content: space-between;
+    background-color: #1d1b1b;
 }
 
 .logo{
@@ -16,15 +16,5 @@ header{
 .iniciar{
     padding: 1em;
     margin-right: 1em;
-}
-form{
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 0.4em;
-}
-a{
-    color: grey;
-}
-a:hover{
-    font-weight: 600;
+    color: white;
 }

@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+    background-color: #1d1b1b;
+}
+.logo{
+    padding: 1em;
+    margin-top: 2em;  
+}
+.userInfo{
+    align-items: center;
+}
+.icons{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.icons > *{
+    margin: 1em;
+}
+#logout{
+    color: #ec4d37;
+    font-size: 28px;
+}
+#username{
+    color: white;
+}
+#logout{
+    text-decoration: none;
+}
+@media screen and (max-width: 1018px) {
+    header {   
+      flex-direction: column;
+    }
+    
+  }

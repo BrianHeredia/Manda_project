@@ -1,0 +1,22 @@
+
+.input{
+    margin-right:0;
+    margin-left: 0;
+}
+.button{
+    margin-left: 0;
+    height: 38px;
+}
+select{
+    margin-right:0;
+    height: 38px;
+}
+@media screen and (max-width: 500px) {
+    form{
+        white-space: nowrap;
+    }
+    select {   
+      width: 45px;
+    }
+    
+  }

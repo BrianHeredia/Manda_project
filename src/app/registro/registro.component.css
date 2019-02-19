@@ -1,0 +1,17 @@
+h2{
+    margin-bottom: 1em;
+}
+.register{
+    width: 50%;
+    padding: 1em;
+}
+.form{
+    display: flex;
+}
+.input-form{
+    width: 100%;
+}
+.casilla{
+    margin: 1em;
+    width: 100%;
+}

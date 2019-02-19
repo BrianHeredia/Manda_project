@@ -1,0 +1,29 @@
+div{
+    width: 100%;
+}
+.navbar{
+    background-color: #1d1b1b;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin:0.5em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+.navbar a {
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 1018px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,14 @@
+form{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0.4em;
+}
+a{
+    color: grey;
+}
+a:hover{
+    font-weight: 600;
+}
+label{
+    color: white;
+}

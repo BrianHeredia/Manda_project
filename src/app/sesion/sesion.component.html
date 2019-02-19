@@ -1,0 +1,14 @@
+<form (submit)="onSubmitLogIn()">
+  <div class="column">
+      <label for="email">Email:</label><br>
+      <input id="email" type="email" name="email" id="logInEmail" [(ngModel)]="email">
+  </div>
+  <div>
+      <label for="password">Contraseña:</label><br>
+      <input type="password" id="password" name="password"  id="logInPass" [(ngModel)]="password">
+  </div>
+  <div>
+      <input class="button" type="submit" value="Iniciar Secion">
+  </div>
+</form>
+<a>Olvidaste tu contraseña?</a>

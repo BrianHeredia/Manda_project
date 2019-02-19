@@ -1,0 +1,60 @@
+.first{
+    font-family: 'Ubuntu', 'sans-serif';
+    display: flex;
+    align-items: center;
+    color:#1d1b1b;
+    font-size: 2.5vw;
+}
+#vector{
+    max-width: 30rem;
+}
+.container{
+    margin: 0;
+    padding: 1em;
+    padding-left: 3em;
+    background-image: linear-gradient(to bottom, grey,#1d1b1b );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: 100%;
+    overflow: scroll;
+}
+
+.slide-div{
+    padding: 1em;
+    color: #1d1b1b;
+    margin-top: 30px;
+    background-color: white;
+    height: 15rem;
+    border-radius: 5px;
+    overflow-y: hidden;
+    overflow-x:scroll;
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    padding-left: 3em;
+}
+li{
+    margin: 1em;
+    min-width: 250px;   
+    white-space: nowrap;
+}
+a > img {
+    max-height: 10rem;
+}
+@media screen and (max-width: 1018px) {
+    #vector {   
+      max-width: 18rem; 
+    }
+    
+  }
+  @media screen and (max-width: 450px) {
+    #vector {   
+      max-width: 10rem; 
+    }
+    
+  }
