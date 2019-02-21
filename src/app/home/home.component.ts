@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
   public products = [];
-  public product = '';
+  //public product = '';
 
   ngOnInit() {
     this.dataApi.getAllProduct().subscribe(products =>{

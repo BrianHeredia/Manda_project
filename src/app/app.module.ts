@@ -24,6 +24,10 @@ import { SliderComponent } from './slider/slider.component';
 import { AuthGuard } from './guards/auth.guard';
 import { PerfilComponent } from './perfil/perfil.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { ConfigComponent } from './config/config.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { DeseosComponent } from './deseos/deseos.component';
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
 
   declarations: [
@@ -40,7 +44,11 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     NavbarComponent,
     SliderComponent,
     PerfilComponent,
-    DetailProductComponent
+    DetailProductComponent,
+    ConfigComponent,
+    CarritoComponent,
+    DeseosComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -3,9 +3,9 @@ div{
 }
 .navbar{
     background-color: #1d1b1b;
-    border-bottom-color: black;
     border-bottom-style: solid;
-    border-bottom-width: 3px;
+    border-bottom-color: #ec4d37;
+    border-bottom-width: 6px;
     width: 100%;
     list-style: none;
     display: flex;
@@ -16,13 +16,19 @@ div{
     margin-bottom: 1em;
     margin-left: 1em;
 }
+
 .navbar a {
     white-space: nowrap;
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
-@media screen and (max-width: 1018px) {
+.navbar a:hover {
+    color:  #ec4d37;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+@media screen and (max-width: 804px) {
     .row, .navbar {   
       flex-direction: column;
     }

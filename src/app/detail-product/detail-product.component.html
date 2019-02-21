@@ -1,1 +1,9 @@
-{{product | json}}
+<app-header></app-header>
+<app-navbar></app-navbar>
+<h1>{{product.product_title}}</h1>
+<img src={{product.portada}} width="300px">
+<h3>Promoción: {{product.promocion == true ? 'Si': 'No'}} </h3>
+<h3>Precio: ${{product.price}}</h3>
+<h3>Descripción de producto:</h3>
+<p> {{product.description}}</p>
+<app-footer></app-footer>

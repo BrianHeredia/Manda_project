@@ -17,6 +17,9 @@ export class DataApiService {
   private products: Observable <ProductInterface[]>;
   private productDoc: AngularFirestoreDocument<ProductInterface>;
   private product: Observable<ProductInterface>;
+  public selectedProduct: ProductInterface = {
+    id: null
+  };
 
   getAllProduct(){  
     return this.products = this.productsCollection.snapshotChanges()
@@ -41,8 +44,19 @@ export class DataApiService {
       }
     }));
   }
-  addProduct(){  }
-  updateProduct(){}
-  deleteProduct(){}
+
+  addProduct(product: ProductInterface): void{ 
+     this.productsCollection.add(product);
+   }
+
+  updateProduct(product: ProductInterface): void{
+    let idProduct = product.id;
+    this.productDoc = this.afs.doc<ProductInterface>(`productos/${idProduct}`);
+    this.productDoc.update(product);
+  }
+  deleteProduct(idProduct: string): void{
+    this.productDoc = this.afs.doc<ProductInterface>(`productos/${idProduct}`);
+    this.productDoc.delete();
+  }
 
 }

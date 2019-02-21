@@ -5,12 +5,19 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard} from './guards/auth.guard';
 import { PerfilComponent} from './perfil/perfil.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
-
+import { CarritoComponent } from './carrito/carrito.component';
+import { DeseosComponent } from './deseos/deseos.component';
+import { ConfigComponent } from './config/config.component';
+import { AdminComponent } from './admin/admin.component';
 const routes: Routes = [
   { path: '', component: WelcomeComponent  },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
   { path: 'profile', component: PerfilComponent},
-  { path: 'detail/:id', component: DetailProductComponent }
+  { path: 'detail/:id', component: DetailProductComponent },
+  { path: 'carrito', component: CarritoComponent },
+  { path: 'deseos', component: DeseosComponent },
+  { path: 'config', component: ConfigComponent },
+  { path: 'admin', component: AdminComponent }
 ];
 
 @NgModule({

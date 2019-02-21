@@ -1,0 +1,50 @@
+<section class="title">
+  <h1>ADMIN CRUD</h1>
+</section>
+
+<section class="main">
+  <div class="col">
+    <div class="newForm">
+      <form #formProduct="ngForm" (ngSubmit)="onSaveProduct(formProduct)" class="newProduct">
+          <h2>Crear o modificar producto</h2>
+          <input type="hidden" name="id" [(ngModel)]="this.dataApi.selectedProduct.id">
+          <input type="text" name="product_title" placeholder="Titulo del producto" [(ngModel)]="this.dataApi.selectedProduct.product_title">
+          <input type="text" name="creator"  placeholder="Creador" [(ngModel)]="this.dataApi.selectedProduct.creator">
+          <input type="text" name="description" placeholder="Descripción" [(ngModel)]="this.dataApi.selectedProduct.description">
+          <input type="number" name="price" placeholder="Precio" [(ngModel)]="this.dataApi.selectedProduct.price">
+          <input type="text" name="portada" placeholder="URL imagen" [(ngModel)]="this.dataApi.selectedProduct.portada" >
+          <div class="promo">
+              <label>Con promoción:</label> <input type="radio" name="promocion" value="true" [(ngModel)]="this.dataApi.selectedProduct.promocion">
+          <label>Sin promoción:</label> <input type="radio" name="promocion" value="false" checked="checked" [(ngModel)]="this.dataApi.selectedProduct.promocion">
+          <input type="submit" value="Guardar" class="button" id="new">
+        </div>
+      </form>
+    </div>
+    <table>
+      <thead>
+        <tr class="rowTitle">
+          <th scope="col">#</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Creador</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Promoción</th>
+          <th scope="col">Foto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; index as i" class="rowELement">
+          <th scope="row" id="id">{{i+1}}</th>
+          <td>{{products[i].product_title}}</td>
+          <td>{{products[i].creator}}</td>
+          <td>{{products[i].description}}</td>
+          <td>{{products[i].price}}</td>
+          <td>{{products[i].promocion == true ? 'Con promoción': 'Sin promoción'}}</td>
+          <td><img src={{products[i].portada}} width="200px"></td>
+          <td><button class="button" id="upd" (click)="onPreUpdateProduct(products[i])">Modificar</button></td>
+          <td><button class="button" id="del" (click)="onDeleteProduct(products[i].id)">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

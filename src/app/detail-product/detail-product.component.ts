@@ -19,6 +19,7 @@ export class DetailProductComponent implements OnInit {
   }
 
   getDetails(idProduct: string): void{
+    console.log(idProduct)
     this.dataApi.getOneProduct(idProduct).subscribe( product => {
       this.product = product;
     });

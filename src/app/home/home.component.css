@@ -20,9 +20,15 @@
     height: 100%;
     overflow: scroll;
 }
-
+h2{
+  position: sticky;
+  left: 0;
+  padding-left: 1em;
+}
 .slide-div{
     padding: 1em;
+    padding-left: 0;
+    padding-right: 0;
     color: #1d1b1b;
     margin-top: 30px;
     background-color: white;
@@ -36,7 +42,36 @@ ul{
     list-style-type: none;
     text-align: center;
     display: flex;
-    padding-left: 3em;
+    margin-left:0;
+}
+button{
+  font-size: 50px;
+  align-items: center;
+  font-family: 'Coiny';
+  color: #1d1b1b;
+  background-color: rgba(30, 45, 49, 0.534);
+  border: none;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  height: 100px;
+  margin-top: 50px;
+}
+button:hover {opacity: 1}
+#left{
+  margin-left:0;
+  position: sticky;
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+#right{
+ display: flex-end;
+  margin-right: 0;
+  position: sticky;
+  right: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 li{
     margin: 1em;

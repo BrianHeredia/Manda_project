@@ -7,77 +7,16 @@
     </div>
     
 
-    <div id="Promociones" class="slide-div">
-            <h1>{{products[0].creator}}</h1><h2>Promociones</h2>
+    <div class="slide-div">
+            <h2>Productos</h2>
             <ul class="slide-productos">
-                <button></button>
-                <li>
-                    <a href=""><img src="../../assets/images/televisor.jpg" alt="PRODUCTO"></a>
+                
+                <li *ngFor="let product of products; index as i">
+                    <a routerLink="/detail/{{products[i].id}}"><img src={{products[i].portada}} alt="PRODUCTO"></a>
                 </li>
-                <li>
-                    <a href=""><img src="../../assets/images/balon.jpg" alt="PRODUCTO" ></a>
-                </li>
-                <li>
-                    <a href=""><img src="../../assets/images/licuadora.jpg" alt="PRODUCTO" ></a>
-                </li>
-                <li>
-                    <a href=""><img src="../../assets/images/iphonex.jpg" alt="PRODUCTO" ></a>
-                </li>
-                <li>
-                    <a href=""><img src="../../assets/images/xiaomi.jpg" alt="PRODUCTO" ></a>
-                </li>
+                
             </ul>
-        </div>
-        <div id="Promociones" class="slide-div">
-            <h2>Telefonos inteligentes</h2>
-            <ul class="slide-productos">
-                    <li>
-                        <a href=""><img src="../../assets/images/televisor.jpg" alt="PRODUCTO"></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/balon.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/licuadora.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/iphonex.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                </ul>
-        </div>
-        <div id="Los mas vendidos" class="slide-div">
-            <h2>Tendencias en video juegos</h2>
-            <ul class="slide-productos">
-                    <li>
-                        <a href=""><img src="../../assets/images/televisor.jpg" alt="PRODUCTO"></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/balon.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/licuadora.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/iphonex.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                </ul>
-        </div>
-        <div id="Recomendados" class="slide-div">
-            <h2>Los mas vendidos en artículos para el hogar</h2>
-            <ul class="slide-productos">
-                    <li>
-                        <a href=""><img src="../../assets/images/televisor.jpg" alt="PRODUCTO"></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/balon.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/licuadora.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../../assets/images/iphonex.jpg" alt="PRODUCTO" ></a>
-                    </li>
-                </ul>
-        </div>
+        </div>       
+    
 </div>
 <app-footer></app-footer>
