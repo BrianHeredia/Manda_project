@@ -28,6 +28,10 @@ import { ConfigComponent } from './config/config.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { DeseosComponent } from './deseos/deseos.component';
 import { AdminComponent } from './admin/admin.component';
+import { ConfigPaymentComponent } from './config-payment/config-payment.component';
+import { HistorialComponent } from './historial/historial.component';
+
+
 @NgModule({
 
   declarations: [
@@ -48,7 +52,9 @@ import { AdminComponent } from './admin/admin.component';
     ConfigComponent,
     CarritoComponent,
     DeseosComponent,
-    AdminComponent
+    AdminComponent,
+    ConfigPaymentComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,

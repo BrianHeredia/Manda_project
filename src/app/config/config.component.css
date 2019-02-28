@@ -1,0 +1,19 @@
+main{
+    display: flex;
+}
+aside{
+    padding: 1rem;
+}
+ul{
+    list-style: none;
+    margin-top: 1em;
+}
+li{
+    margin: 0.5em;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    font-weight: 600;
+}

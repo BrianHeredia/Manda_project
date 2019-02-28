@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { map } from "rxjs/operators";
+import { resolve } from 'path';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,6 +26,14 @@ export class AuthService {
       .then( userData => resolve(userData),
       err => reject (err));
     });
+  }
+
+  updateEmail(email: string){
+    this.afAuth.auth.currentUser.updateEmail(email).then(function() {
+      console.log(" Update successful.");
+    }).catch(function(error) {
+      console.log("  An error happened.", error);
+    }); 
   }
 
   getAuth(){

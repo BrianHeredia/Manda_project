@@ -1,6 +1,8 @@
-<h1>PERFIL DEL USUARIO</h1>
-<p>
-  {{user.email}}
-  <br>
-  {{user.name}}
-</p>
+<div>
+    <h2>Perfil del Usuario</h2>
+    <form>
+        Nombre: <input type="text" name="firstname" value="{{user.name}}" disabled> <a href="#"><img src="../../assets//images//edit.png" alt=""></a> <br>
+        E-mail: <input type="email" name="email" value="{{user.email}}" disabled> <a href="#"><img src="../../assets//images//edit.png" alt=""></a> <br>  
+        Contraseña: <input type="text" name="pass" value="********" disabled>  <a href="#"><img src="../../assets//images//edit.png" alt=""></a>       
+    </form>
+</div>

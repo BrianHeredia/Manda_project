@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { UserInterface } from '../models/user';
+import { NgForm } from '@angular/forms';
+import { UserinfoService } from '../services/userinfo.service';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -34,7 +38,7 @@ export class RegistroComponent implements OnInit {
             console.log('userActual', user);
             user.updateProfile({
               displayName: this.first.toLowerCase().charAt(0).toUpperCase() + this.first.toLowerCase().slice(1) + ' ' + this.last.toLowerCase().charAt(0).toUpperCase() + this.last.toLowerCase().slice(1),
-              photoURL: "https://example.com/hola.png"
+              photoURL: null
             }).then( () =>{
               console.log('USER UPDATED');
             }).catch( (error) => console.log('error',error));

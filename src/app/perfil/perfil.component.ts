@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { UserInterface } from '../models/user';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-perfil',
@@ -24,6 +25,10 @@ export class PerfilComponent implements OnInit {
         console.log('USER',user);
       }
     });
+  }
+  
+  onGuardarCambios(){
+
   }
 
 }

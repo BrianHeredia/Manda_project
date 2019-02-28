@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+}
+h1,h2,h3,p,label,input,img, button,h4{
+    margin: 1rem;
+}
+.modulo{
+    margin: 1rem;
+    border-style: solid;
+    border-width: 3px; 
+    border-color: #1d1b1b;
+    max-height: 300px;
+    width: 250px;
+    text-align: center;
+}
+hr{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#cart_sep{
+    width: 200px;
+}
+.articulo{  
+    max-width: 500px;
+}
+#cantidad{
+    width: 30px;
+}
+span{
+    color: green;
+}
+#deseos{
+    background-color: #1d1b1b;
+}
+@media screen and (max-width: 900px) {
+    .container {   
+      flex-direction: column;
+    }
+  }

@@ -10,11 +10,11 @@
     <div class="slide-div">
             <h2>Productos</h2>
             <ul class="slide-productos">
-                
+                <button id="left">&gt;</button>
                 <li *ngFor="let product of products; index as i">
                     <a routerLink="/detail/{{products[i].id}}"><img src={{products[i].portada}} alt="PRODUCTO"></a>
                 </li>
-                
+                <button id="right">&lt;</button>
             </ul>
         </div>       
     
