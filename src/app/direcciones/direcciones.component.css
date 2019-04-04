@@ -1,0 +1,20 @@
+div{
+    padding: 1em;
+}
+button,h1{
+    margin:1em;
+}
+.address{
+    padding:1em;
+    border-style: solid;
+}
+#eliminar{
+    margin:0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+#custom-modal-1{
+    /* modals are hidden by default */
+    display: none;
+    text-align: center;
+}

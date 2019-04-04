@@ -1,16 +1,19 @@
 <div>
     <ul class="navbar">
         <li >
-          <a  href="#">Nuestros productos</a>
+            <a routerLink="/home" (click)="cambiarState(0)">Home</a>
+          </li>
+        <li >
+          <a routerLink="/home" (click)="cambiarState(1)">Nuestros productos</a>
         </li>
         <li >
-          <a  href="#">Los mas vendidos</a>
+          <a  routerLink="/home" (click)="cambiarState(2)">Los mas vendidos</a>
         </li>
         <li >
-          <a  href="#">Recomendados para ti</a>
+          <a  routerLink="/home" (click)="cambiarState(3)">Recomendados para ti</a>
         </li>
         <li >
-          <a  href="#">Promociones</a>
+          <a routerLink="/home" (click)="cambiarState(4)">Promociones</a>
         </li>
       </ul> 
 </div>

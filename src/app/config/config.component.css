@@ -3,17 +3,31 @@ main{
 }
 aside{
     padding: 1rem;
+    background-color: rgba(43, 33, 30, 0.863);
+    
 }
 ul{
     list-style: none;
     margin-top: 1em;
+    
 }
 li{
     margin: 0.5em;
+    
 }
 a{
     text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+h3{
+    color: white;
 }
 a:hover{
-    font-weight: 600;
+    font-weight: 700;
 }
+@media screen and (max-width: 664px) {
+    main{
+        flex-direction: column;
+    }
+  }

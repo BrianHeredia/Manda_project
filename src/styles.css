@@ -17,6 +17,7 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 15px;    
+    cursor: pointer;
 }
 .button:hover{
     font-weight: 600;
@@ -33,8 +34,8 @@ input{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 9px;
+    height: 9px;
   }
   
   /* Track */
@@ -44,15 +45,15 @@ input{
   }
   
   /* Handle */
-  ::-moz-scrollbar-thumb {
-    background: rgb(24, 22, 22); 
+  ::-webkit-scrollbar-thumb {
+    background: #1d1b1b; 
     border-radius: 10px;
   }
   
 /* width */
 ::-moz-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 9px;
+  height: 9px;
   }
   
   /* Track */
@@ -63,13 +64,13 @@ input{
   
   /* Handle */
   ::-moz-scrollbar-thumb {
-    background: rgb(36, 33, 33); 
+    background: #1d1b1b; 
     border-radius: 10px;
   }
   /* width */
 ::-ms-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 9px;
+  height: 9px;
   }
   
   /* Track */
@@ -80,12 +81,12 @@ input{
   
   /* Handle */
   ::-ms-scrollbar-thumb {
-    background: rgb(36, 33, 33); 
+    background: #1d1b1b; 
     border-radius: 10px;
   }
 
   .alert.flash-message{
-    height:40px;
+    height:50px;
     color: #1d1b1b;
     background-color: #ec4d37;
     font-weight: bold;

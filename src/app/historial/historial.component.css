@@ -1,0 +1,11 @@
+.container{
+    padding: 1em;
+}
+h2,.product{
+    margin: 1em;
+}
+.product{
+    display: flex;
+    height: 5em;
+    border-style: solid;
+}

@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./config.component.css']
 })
 export class ConfigComponent implements OnInit {
-
+  
+  public state = 0;
   constructor() { }
 
   ngOnInit() {

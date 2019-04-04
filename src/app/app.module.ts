@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FlashMessagesService} from 'angular2-flash-messages';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { WelcomeHeaderComponent } from './welcome/welcome-header/welcome-header.
 import { WelcomeMainComponent } from './welcome/welcome-main/welcome-main.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './services/auth.service';
+import { ModalService } from './services/modal.service';
 import { FormsModule } from '@angular/forms';
 import { SesionComponent } from './sesion/sesion.component';
 import { RegistroComponent } from './registro/registro.component';
@@ -30,6 +31,13 @@ import { DeseosComponent } from './deseos/deseos.component';
 import { AdminComponent } from './admin/admin.component';
 import { ConfigPaymentComponent } from './config-payment/config-payment.component';
 import { HistorialComponent } from './historial/historial.component';
+import { DireccionesComponent } from './direcciones/direcciones.component';
+import { ProductosComponent } from './productos/productos.component';
+import { MasVendidosComponent } from './mas-vendidos/mas-vendidos.component';
+import { RecomendadosComponent } from './recomendados/recomendados.component';
+import { PromocionesComponent } from './promociones/promociones.component';
+import { ModalComponent } from './modal/modal.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 @NgModule({
@@ -54,7 +62,14 @@ import { HistorialComponent } from './historial/historial.component';
     DeseosComponent,
     AdminComponent,
     ConfigPaymentComponent,
-    HistorialComponent
+    HistorialComponent,
+    DireccionesComponent,
+    ProductosComponent,
+    MasVendidosComponent,
+    RecomendadosComponent,
+    PromocionesComponent,
+    ModalComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +83,8 @@ import { HistorialComponent } from './historial/historial.component';
     AuthService,
     AuthGuard,
     FlashMessagesService,
-    AngularFirestore
+    AngularFirestore,
+    ModalService
   ],
   bootstrap: [AppComponent]
 })

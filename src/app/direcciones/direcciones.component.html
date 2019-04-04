@@ -1,0 +1,26 @@
+<div>
+  <h2>Edita las direcciones para tus envíos</h2>
+  <button class="button" (click)="openModal('custom-modal-1')" >+ Agregar dirección</button>
+  <div class="address">
+    <h3>{{address[0].receiver}} </h3>
+    <p>{{address[0].line1}}</p>
+    <p>{{address[0].line2}} </p>
+    <p>{{address[0].parroquia}}, {{address[0].municipio}}, {{address[0].city}}, {{address[0].state}}</p>
+    <p>{{address[0].zip}}</p>
+    <button class="button" id="eliminar">- Eliminar</button>
+  </div>
+
+  <jw-modal id="custom-modal-1">
+      <h1>Agregue una nueva dirección</h1>
+          <p>Nombre y apellido del receptor: <input type="text" [(ngModel)]="address[0].receiver" /></p>
+          <p>Línea 1: <input type="text" [(ngModel)]="address[0].line1" /></p>
+          <p>Línea 2: <input type="text" [(ngModel)]="address[0].line2" /></p>
+          <p>Parroquia: <input type="text" [(ngModel)]="address[0].parroquia" /></p>
+          <p>Municipio: <input type="text" [(ngModel)]="address[0].municipio" /></p>
+          <p>Ciudad: <input type="text" [(ngModel)]="address[0].city" /></p>
+          <p>Estado: <input type="text" [(ngModel)]="address[0].state" /></p>
+          <p>Código postal: <input type="text" [(ngModel)]="address[0].zip" /></p>
+      <button class="button"  (click)="addNew();" (click)="closeModal('custom-modal-1');" >Agregar</button>
+  </jw-modal>
+
+</div>

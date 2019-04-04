@@ -4,3 +4,41 @@ div{
 h2,form{
     margin:1em;
 }
+.input{
+    width: 100%;
+}
+.line{
+    display: flex;
+    align-items: center;
+    padding:0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+a{
+    margin-left: 0.8em;
+    cursor: pointer;
+}
+#custom-modal-1,#custom-modal-2,#custom-modal-3,#custom-modal-4{
+    /* modals are hidden by default */
+    display: none;
+    text-align: center;
+}
+button{
+    margin-top: 1em;
+}
+h1{
+    margin-bottom: 0.5em;
+}
+p{
+   white-space: nowrap;
+   
+}
+#advertencia{
+    margin-left:1.5em;
+}
+.button{
+    margin-left:1.5em;
+}
+#btn{
+    margin-bottom: 10em;
+}

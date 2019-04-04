@@ -1,0 +1,17 @@
+div{
+    padding: 1em;
+}
+h2,form,hr{
+    margin:1em;
+}
+.line{
+    display:flex;
+}
+#pdf,#paypal{
+    margin-right:1em;
+}
+p{
+    color:grey;
+    font-size: 12px;
+    padding-left: 1em;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../services/data-api.service';
+import { UserService } from '../services/user.service';
 import { ProductInterface } from '../models/product';
 import { ActivatedRoute, Params} from '@angular/router';
 
@@ -10,7 +11,7 @@ import { ActivatedRoute, Params} from '@angular/router';
 })
 export class DetailProductComponent implements OnInit {
 
-  constructor( private dataApi: DataApiService, private route: ActivatedRoute) { }
+  constructor( private userService: UserService, private dataApi: DataApiService, private route: ActivatedRoute) { }
   public product: ProductInterface = {};
 
   ngOnInit() {
@@ -19,9 +20,15 @@ export class DetailProductComponent implements OnInit {
   }
 
   getDetails(idProduct: string): void{
-    console.log(idProduct)
     this.dataApi.getOneProduct(idProduct).subscribe( product => {
-      this.product = product;
+    this.product = product;
     });
   }
+ sendToCart(){
+  const idProduct = this.route.snapshot.params['id'];
+  this.userService.addProductToCart(idProduct);
+  this.userService.setLocal();
+  this.userService.updateUser();
+ }
+
 }

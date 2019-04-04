@@ -1,22 +1,28 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
-<div class="container">
-    <div class="first">
-        <h1>Realiza la compra de tus produtos preferidos: Rapido, fácil y seguro, tu solo MANDA! </h1>
-        <img id="vector" src="../../assets/images/worker2.png">
-    </div>
-    
+<div [ngSwitch]="this.stateService.checkState()">
+        <div *ngSwitchCase="0" class="container">
+            <div class="first">
+                <h1>Realiza la compra de tus produtos preferidos: Rapido, fácil y seguro, tu solo MANDA! </h1>
+                <img id="vector" src="../../assets/images/worker2.png">
+            </div>
+        
+            <div class="slide-div">
+                <h2>Nuestros productos en Electrónicos</h2>
+                <ul class="slide-productos">
+                    <li *ngFor="let electronic of electronics; index as i">
+                        <a routerLink="/detail/{{electronics[i].id}}"><img src={{electronics[i].portada}} alt="PRODUCTO"></a>
+                    </li>
+                </ul>
+            </div> 
 
-    <div class="slide-div">
-            <h2>Productos</h2>
-            <ul class="slide-productos">
-                <button id="left">&gt;</button>
-                <li *ngFor="let product of products; index as i">
-                    <a routerLink="/detail/{{products[i].id}}"><img src={{products[i].portada}} alt="PRODUCTO"></a>
-                </li>
-                <button id="right">&lt;</button>
-            </ul>
-        </div>       
-    
+        </div>
+        <app-productos *ngSwitchCase="1"></app-productos>
+        <app-mas-vendidos *ngSwitchCase="2"></app-mas-vendidos>
+        <app-recomendados *ngSwitchCase="3"></app-recomendados>
+        <app-promociones *ngSwitchCase="4"></app-promociones>
+
 </div>
+
+
 <app-footer></app-footer>

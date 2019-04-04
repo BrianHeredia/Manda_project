@@ -2,10 +2,19 @@
     background-color: #1d1b1b;
     color: white;
     display: flex;
+    width: 108%;
 }
 th{
     padding: 1em;
     margin:0;
+}
+.var{
+    margin-top:1em;
+    margin-bottom:0.5em;
+}
+.promo{
+    margin-top:0.5em;
+    margin-bottom:0.5em;
 }
 .rowTitle{
     background-color: #ec4d37;
@@ -28,4 +37,17 @@ h1{
 }
 .newForm{
     margin: 2rem;
+}
+#num-var{
+    width: 30px;
+}
+select{
+    height: 40px;
+    margin: 0.3em;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    padding: 0.5em;
 }

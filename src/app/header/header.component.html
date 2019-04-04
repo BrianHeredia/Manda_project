@@ -1,6 +1,6 @@
 <header>
   <div class="logo" >
-    <a routerLink="/home"> </a><img src="assets/images/Manda.png" alt="logo" style="width: 240px; height: 96px" >
+    <a routerLink="/home" (click)="cambiarState(0)"><img src="assets/images/Manda.png" alt="logo" style="width: 240px; height: 96px" > </a>
   </div>
   <div>
     <app-busqueda></app-busqueda>
@@ -14,7 +14,7 @@
       <div class="config"><a routerLink="/config" id="config" ><img src="../../assets/images/ajustes.png" alt="ajustes"></a></div>
       <div class="deseos"><a routerLink="/deseos" id="deseos"><img src="../../assets/images/deseos.png" alt="deseos"></a></div>
       <div class="carrito"><a routerLink="/carrito" id="carrito"><img src="../../assets/images/carrito.png" alt="carrito"></a></div>
-      <div class="logout"><a href="#" id="logout" (click)="onClickLogout()"><img src="../../assets/images/salida.png" alt="carrito"></a></div>
+      <div class="logout"><a routerLink="/"id="logout" (click)="onClickLogout()"><img src="../../assets/images/salida.png" alt="carrito"></a></div>
     </div>
   </div>
 </header>

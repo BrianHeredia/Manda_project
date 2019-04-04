@@ -22,13 +22,14 @@ div{
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 .navbar a:hover {
     color:  #ec4d37;
     font-size: 1.3rem;
     font-weight: 800;
 }
-@media screen and (max-width: 804px) {
+@media screen and (max-width: 890px) {
     .row, .navbar {   
       flex-direction: column;
     }

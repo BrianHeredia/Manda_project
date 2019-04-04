@@ -1,0 +1,99 @@
+<main>
+    <h1>Departamentos</h1>
+    <div class="slide-div">
+        <h2>Arte, Manualidades y Costura</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let arts of art; index as i">
+                <a routerLink="/detail/{{art[i].id}}"><img src={{art[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Belleza</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let beautys of beauty; index as i">
+                <a routerLink="/detail/{{beauty[i].id}}"><img src={{beauty[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Celulares y accesorios</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of cellphones; index as i">
+                <a routerLink="/detail/{{cellphones[i].id}}"><img src={{cellphones[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Libros</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of books; index as i">
+                <a routerLink="/detail/{{books[i].id}}"><img src={{books[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Ropa para cabellero</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of gentlemen; index as i">
+                <a routerLink="/detail/{{gentlemen[i].id}}"><img src={{gentlemen[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Ropa para dama</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of ladys; index as i">
+                <a routerLink="/detail/{{ladys[i].id}}"><img src={{ladys[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Ropa para niño</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of kids; index as i">
+                <a routerLink="/detail/{{kids[i].id}}"><img src={{kids[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Deportes y aire libre</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of sports; index as i">
+                <a routerLink="/detail/{{sports[i].id}}"><img src={{sports[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Electrónicos</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let electronic of electronics; index as i">
+                <a routerLink="/detail/{{electronics[i].id}}"><img src={{electronics[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div> 
+    <div class="slide-div">
+        <h2>Hogar y cocina</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of home; index as i">
+                <a routerLink="/detail/{{home[i].id}}"><img src={{home[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-div">
+        <h2>Salud y cuidado personal</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of health; index as i">
+                <a routerLink="/detail/{{health[i].id}}"><img src={{health[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div>  
+    <div class="slide-div">
+        <h2>Videojuegos</h2>
+        <ul class="slide-productos">
+            <li *ngFor="let product of games; index as i">
+                <a routerLink="/detail/{{games[i].id}}"><img src={{games[i].portada}} alt="PRODUCTO"></a>
+            </li>
+        </ul>
+    </div> 
+</main>

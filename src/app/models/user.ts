@@ -1,8 +1,9 @@
 export interface UserInterface{
     id?: string;
     name?: string;
-    first?: string;
-    last?: string;
     email?: string;
-    password?: string;
+    carrito?: string[];
+    deseos?: string[];
+    address?: [{},{},{},{},{},{},{},{},{},{}];
+    prueba?: string;
 }

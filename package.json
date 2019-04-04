@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -26,6 +26,7 @@
     "core-js": "^2.5.4",
     "firebase": "^5.8.2",
     "ngx-auth-firebaseui": "^2.3.2",
+    "ngx-cacheable": "^1.0.9",
     "rxjs": "^6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

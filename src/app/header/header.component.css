@@ -37,12 +37,15 @@ header{
 #logout{
     text-decoration: none;
 }
+a{
+    cursor: pointer;
+}
 @media screen and (max-width: 1280px) {
     header {   
       flex-direction: column;
     }
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 632px) {
     .icons{
         flex-direction: column;
     }

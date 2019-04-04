@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { StateService } from '../services/state.service';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,7 +12,9 @@ export class HeaderComponent implements OnInit {
   public emailUser: string;
 
   constructor(
-    public authService: AuthService
+    public authService: AuthService,
+    private stateService: StateService,
+    private userService: UserService
   ) { }
 
   ngOnInit() {
@@ -26,5 +30,10 @@ export class HeaderComponent implements OnInit {
 
   onClickLogout(){
     this.authService.logout();
+    sessionStorage.removeItem('currentUser');
+    sessionStorage.removeItem('userInfo');
+  }
+  cambiarState(state){
+    this.stateService.changeState(state);
   }
 }

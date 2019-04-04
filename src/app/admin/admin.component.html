@@ -5,44 +5,79 @@
 <section class="main">
   <div class="col">
     <div class="newForm">
+        <h2>Crear o modificar producto</h2>
+        <div class="var">
+          <label>Con variación:</label> <input type="radio" name="variacion" value="true"  (click)="this.change(true,0)" [(ngModel)]="this.dataApi.selectedProduct.variacion">
+          <label>Sin variación:</label> <input type="radio" name="variacion" value="false"   (click)="this.change(false,0)" [(ngModel)]="this.dataApi.selectedProduct.variacion">
+          <div *ngIf="various">
+            <label>Indique el numero de variaciones y presione OK:</label>
+            <input type="number" max=5 min=2 id="num-var" [(ngModel)]="this.num_var" [ngModelOptions]="{standalone: true}">
+            <button class="button" (click)="this.change(true,2)">OK</button>
+            <div id="entradas"></div>
+          </div>
+        </div>
+        <div class="promo">
+          <label>Con promoción:</label> <input type="radio" name="promocion" value="true" (click)="this.change(true,1)" [(ngModel)]="this.dataApi.selectedProduct.promocion">
+          <label>Sin promoción:</label> <input type="radio" name="promocion" value="false" (click)="this.change(false,1)" [(ngModel)]="this.dataApi.selectedProduct.promocion">
+          <div *ngIf="proms">
+            <label>Indique el porcetaje de descuento:</label>
+            <input type="number" max=100 min=0 id="num-prom" [(ngModel)]="this.dataApi.selectedProduct.desc" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
       <form #formProduct="ngForm" (ngSubmit)="onSaveProduct(formProduct)" class="newProduct">
-          <h2>Crear o modificar producto</h2>
           <input type="hidden" name="id" [(ngModel)]="this.dataApi.selectedProduct.id">
           <input type="text" name="product_title" placeholder="Titulo del producto" [(ngModel)]="this.dataApi.selectedProduct.product_title">
           <input type="text" name="creator"  placeholder="Creador" [(ngModel)]="this.dataApi.selectedProduct.creator">
           <input type="text" name="description" placeholder="Descripción" [(ngModel)]="this.dataApi.selectedProduct.description">
           <input type="number" name="price" placeholder="Precio" [(ngModel)]="this.dataApi.selectedProduct.price">
           <input type="text" name="portada" placeholder="URL imagen" [(ngModel)]="this.dataApi.selectedProduct.portada" >
-          <div class="promo">
-              <label>Con promoción:</label> <input type="radio" name="promocion" value="true" [(ngModel)]="this.dataApi.selectedProduct.promocion">
-          <label>Sin promoción:</label> <input type="radio" name="promocion" value="false" checked="checked" [(ngModel)]="this.dataApi.selectedProduct.promocion">
+          <select name="departamento" >
+              <option disabled="disabled" >Departamento</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Arte">Arte, Manualidades y Costura</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Belleza">Belleza</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Celulares">Celulares y accesorios</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Libros">Libros</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Caballeros">Ropa para cabellero</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Damas">Ropa para dama</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Niños">Ropa para niño</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Deportes">Deportes y aire libre</option>
+              <option  [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Electronicos">Electrónicos</option>
+              <option  [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Hogar">Hogar y cocina</option>
+              <option  [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Salud">Salud y cuidado personal</option>
+              <option [(ngModel)]="this.dataApi.selectedProduct.departamento" value="Videojuegos">Videojuegos</option>
+          </select>
           <input type="submit" value="Guardar" class="button" id="new">
-        </div>
-      </form>
+        </form>
     </div>
     <table>
       <thead>
         <tr class="rowTitle">
           <th scope="col">#</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
           <th scope="col">Titulo</th>
           <th scope="col">Creador</th>
           <th scope="col">Descripción</th>
+          <th scope="col">Departamento</th>
           <th scope="col">Precio</th>
           <th scope="col">Promoción</th>
+          <th scope="col">Variación</th>
           <th scope="col">Foto</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let product of products; index as i" class="rowELement">
           <th scope="row" id="id">{{i+1}}</th>
+          <td><button class="button" id="upd"  (click)="this.topFunction()" (click)="onPreUpdateProduct(products[i])">Modificar</button></td>
+          <td><button class="button" id="del" (click)="onDeleteProduct(products[i].id)">Eliminar</button></td>
           <td>{{products[i].product_title}}</td>
           <td>{{products[i].creator}}</td>
-          <td>{{products[i].description}}</td>
+          <td id="descrip">{{products[i].description}}</td>
+          <td>{{products[i].departamento}}</td>
           <td>{{products[i].price}}</td>
-          <td>{{products[i].promocion == true ? 'Con promoción': 'Sin promoción'}}</td>
+          <td>{{products[i].promocion == "true" ? products[i].desc : 'Sin promoción'}}</td>
+          <td>{{products[i].variacion == "true" ? products[i].var_tipo : 'No'}}</td>
           <td><img src={{products[i].portada}} width="200px"></td>
-          <td><button class="button" id="upd" (click)="onPreUpdateProduct(products[i])">Modificar</button></td>
-          <td><button class="button" id="del" (click)="onDeleteProduct(products[i].id)">Eliminar</button></td>
         </tr>
       </tbody>
     </table>

@@ -1,8 +1,49 @@
 <div>
     <h2>Perfil del Usuario</h2>
     <form>
-        Nombre: <input type="text" name="firstname" value="{{user.name}}" disabled> <a href="#"><img src="../../assets//images//edit.png" alt=""></a> <br>
-        E-mail: <input type="email" name="email" value="{{user.email}}" disabled> <a href="#"><img src="../../assets//images//edit.png" alt=""></a> <br>  
-        Contraseña: <input type="text" name="pass" value="********" disabled>  <a href="#"><img src="../../assets//images//edit.png" alt=""></a>       
+        <div class="line"><label>Nombre:</label><input class="input" type="text" name="firstname" value="{{user.name}}" disabled> <a (click)="openModal('custom-modal-1')"><img src="../../assets//images//edit.png" alt=""></a> <br></div>
+        <div class="line"> <label>Email:</label> <input class="input" type="email" name="email" value="{{user.email}}" disabled> <a (click)="openModal('custom-modal-2')"><img src="../../assets//images//edit.png" alt=""></a> <br>  </div>
+        <div class="line"><label>Contraseña:</label><input  class="input" type="text" name="pass" value="********" disabled>  <a (click)="openModal('custom-modal-3')"><img src="../../assets//images//edit.png" alt=""></a></div>      
     </form>
+    <hr>
+    <h2>Borrar cuenta</h2>
+    <p id="advertencia">Desea borrar su cuenta de Manda? Esta acción es irreversible!</p>
+    <button  (click)="onDeleteAccount();" id="btn" class="button">Borrar cuenta</button>
 </div>
+
+<jw-modal id="custom-modal-1">
+    <h1>Edite su nombre</h1>
+        <p>Nombre: <input type="text" value="{{user.name}}" [(ngModel)]="newName" /></p>
+    <button class="button" (click)="closeModal('custom-modal-1');" (click)="onUpdateDisplayName(newName);">Guardar cambios</button>
+</jw-modal>
+
+<jw-modal id="custom-modal-2">
+    <h1>Edite su email</h1>
+        <p>E-mail: <input type="text" value="{{user.email}}" [(ngModel)]="newEmail" /></p>
+    <button class="button" (click)="closeModal('custom-modal-2');" (click)="onUpdateEmail(newEmail);">Guardar cambios</button>
+</jw-modal>
+
+<jw-modal id="custom-modal-3">
+    <h1>Edite su contraseña</h1>
+    <div class="line"><p>Nueva contraseña:</p> <input type="password" id="new" class="input"  [(ngModel)]="newPassword" /></div> 
+    <div class="line"><p>Confirmar contraseña:</p> <input type="password" id="again" class="input"   [(ngModel)]="confirm"/></div> 
+    <button class="button" (click)="closeModal('custom-modal-3');" (click)="onUpdatePassword(newPassword);" >Guardar cambios</button>       
+</jw-modal>
+
+<jw-modal id="custom-modal-4">
+    <h1>Es necesario que vuelva a ingresar sus credenciales de inicio de sesión</h1>
+    <form (submit)="onSubmitLogIn()">
+        <div >
+            <label for="email">Email:</label><br>
+            <input id="email" type="email" name="email" id="logInEmail" [(ngModel)]="email">
+        </div>
+        <div>
+            <label for="password">Contraseña:</label><br>
+            <input type="password" id="password" name="password"  id="logInPass" [(ngModel)]="password">
+        </div>
+        <div>
+            <input class="button" (click)="closeModal('custom-modal-4');" type="submit" value="Iniciar Secion">
+        </div>
+    </form>
+</jw-modal>
+

@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./config-payment.component.css']
 })
 export class ConfigPaymentComponent implements OnInit {
-
+  
+  
   constructor() { }
+  
 
   ngOnInit() {
+
   }
 
 }

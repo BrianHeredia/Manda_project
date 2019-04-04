@@ -4,5 +4,9 @@ export interface ProductInterface{
     description?: string;
     portada?: string;
     price?: Float32Array;
-    promocion?: boolean;
+    promocion?: string;
+    desc?: number;
+    departamento?: string;
+    variacion?: string;
+    var_tipo?: string[];
 }
